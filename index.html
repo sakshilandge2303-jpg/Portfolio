@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sakshi - Personal Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- FontAwesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">Sakshi's Portfolio</div>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="nav-right">
+        <button id="themeToggle" class="theme-btn" aria-label="Toggle Theme">
+          <i class="fa-solid fa-moon"></i>
+        </button>
+        <div class="menu-toggle" id="menuToggle">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <!-- Home / Hero Section -->
+    <section id="home" class="hero section">
+      <div class="hero-content fade-in">
+        <span class="welcome-badge">WELCOME TO MY PORTFOLIO</span>
+        <h1>Hello, I'm <span class="highlight">Sakshi</span></h1>
+        <h2>MCA Student & Web Developer</h2>
+        <p>
+          I am passionate about building clean, interactive web applications and software solutions. 
+          Eager to learn new technologies and translate ideas into functional code.
+        </p>
+        <div class="btn-group">
+          <a href="#projects" class="btn btn-primary">View My Work</a>
+          <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+        </div>
+      </div>
+      <div class="hero-image float-anim fade-in">
+        <img src="sakshi.jpeg" alt="Sakshi Profile Picture" class="profile-img" />
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about section fade-in-scroll">
+      <h2 class="section-title">About Me</h2>
+      <div class="about-grid">
+        <div class="about-card">
+          <h3><i class="fa-solid fa-user"></i> Who Am I?</h3>
+          <p>
+            My name is Sakshi. I am currently pursuing my Master of Computer Applications (MCA). 
+            I love full-stack development, modern UI designs, and problem solving.
+          </p>
+        </div>
+        <div class="about-card">
+          <h3><i class="fa-solid fa-graduation-cap"></i> Education</h3>
+          <p><strong>Master of Computer Applications (MCA)</strong></p>
+          <p>Gokhale Education Society's R. H. Sapat College of Engineering, Nashik</p>
+          <p>Savitribai Phule Pune University</p>
+        </div>
+      </div>
+
+      <div class="skills-container">
+        <h3>My Technical Skills</h3>
+        <div class="skills-grid">
+          <span class="skill-chip"><i class="fa-brands fa-html5"></i> HTML5</span>
+          <span class="skill-chip"><i class="fa-brands fa-css3-alt"></i> CSS3</span>
+          <span class="skill-chip"><i class="fa-brands fa-js"></i> JavaScript</span>
+          <span class="skill-chip"><i class="fa-brands fa-react"></i> React / Next.js</span>
+          <span class="skill-chip"><i class="fa-brands fa-java"></i> Java</span>
+          <span class="skill-chip"><i class="fa-solid fa-database"></i> SQL / MongoDB</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects section fade-in-scroll">
+      <h2 class="section-title">Featured Projects</h2>
+      <div class="project-grid">
+        <div class="project-card">
+          <h3>Smart Agriculture & Fertilizer System</h3>
+          <p>Recommends optimal crops and fertilizers based on soil nutrients and live weather data.</p>
+          <div class="tech-tags">
+            <span>MERN Stack</span>
+            <span>Machine Learning</span>
+          </div>
+        </div>
+        <div class="project-card">
+          <h3>Academic Admission Assist Bot</h3>
+          <p>An intelligent chatbot designed to assist prospective students with admission queries.</p>
+          <div class="tech-tags">
+            <span>Java</span>
+            <span>Spring Boot</span>
+            <span>MySQL</span>
+          </div>
+        </div>
+        <div class="project-card">
+          <h3>Modern Interactive Portfolio</h3>
+          <p>A responsive personal portfolio website with custom animations, glassmorphism UI, and dark mode support.</p>
+          <div class="tech-tags">
+            <span>HTML5</span>
+            <span>CSS3</span>
+            <span>JavaScript</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact section fade-in-scroll">
+      <h2 class="section-title">Get In Touch</h2>
+      <div class="contact-wrapper">
+        <form id="contactForm" class="contact-form" novalidate>
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Your Full Name" required />
+            <small class="error-msg" id="nameError"></small>
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Your Email Address" required />
+            <small class="error-msg" id="emailError"></small>
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Write your message here..." required></textarea>
+            <small class="error-msg" id="messageError"></small>
+          </div>
+          <button type="submit" class="btn btn-primary">Send Message</button>
+          <div id="formSuccess" class="success-msg"></div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; <span id="year"></span> Sakshi. All Rights Reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
